@@ -1,0 +1,1343 @@
+{
+  "name": "EVO",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "",
+      "mgmt": {
+        "network": "mgmt",
+        "bridge": "br-6f4b01a0e9d7",
+        "ipv4-subnet": "172.100.100.0/24",
+        "ipv4-gw": "172.100.100.1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDbs5RKBlP+sKQ4Y0Vxf8hD3C/jWC4Bb3jrNlO73cmnLRvorglwTXFuyplxG+UPDkb5LqtzUm/EgSd+HUpkMIaREqcOIkmdLeDUH3Txlnn4tIlSY8OTzfoRzLX4bdOeKfbt6YLAN7Lg0/zPhlOK+L0SIMbqxkOzm2A8RMc0jHTDkbEEUfXs7AP4o08nGPqokoSOspMMK/9hiqgVneLdEjUcONfTCBQlZ8LuHoyOiQk3oyMUN7uB1AOD+KxJE7bMS4/y7BPu++2eucoldXEBT56Ghr/xDTOhQfehda8AN6E3p/VzLWTLB435AQmvk+oKO7kFe6WOVEHZhwvyB5Hjti0qstYRTb6tcetO1MrBgq9x4xasEzSKym3dYlaSRS+yKTOFYvJw842rS9BAUXo90+CrCF4uJbFwF1awbI1yjsMBpJv7Wo4LvOBXq4WsR2cR3jaeN/uy/d1GuKX1zwnpqPauoNefXH24p26zqy+EeFdh/AJ/sJgdVFEapebt7/Me0G0="],
+  "nodes": {
+    "CE-1": {
+      "index": "0",
+      "shortname": "CE-1",
+      "longname": "CE-1",
+      "fqdn": "CE-1.EVO.io",
+      "group": "",
+      "labdir": "/home/anichol/EVPN-SR/clab-EVO/CE-1",
+      "kind": "ceos",
+      "image": "ceos:4.35.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.112",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:71:3e:70",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6f4b01a0e9d7",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/EVPN-SR/clab-EVO/CE-1",
+        "clab-node-longname": "CE-1",
+        "clab-node-name": "CE-1",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/EVPN-SR/lab.yml",
+        "containerlab": "EVO"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22015,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22015,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44315,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44315,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8015,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8015,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "CE-2": {
+      "index": "1",
+      "shortname": "CE-2",
+      "longname": "CE-2",
+      "fqdn": "CE-2.EVO.io",
+      "group": "",
+      "labdir": "/home/anichol/EVPN-SR/clab-EVO/CE-2",
+      "kind": "ceos",
+      "image": "ceos:4.35.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.113",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:3f:c4:f2",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6f4b01a0e9d7",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/EVPN-SR/clab-EVO/CE-2",
+        "clab-node-longname": "CE-2",
+        "clab-node-name": "CE-2",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/EVPN-SR/lab.yml",
+        "containerlab": "EVO"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22016,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22016,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44316,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44316,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8016,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8016,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "Host1": {
+      "index": "2",
+      "shortname": "Host1",
+      "longname": "Host1",
+      "fqdn": "Host1.EVO.io",
+      "group": "",
+      "labdir": "/home/anichol/EVPN-SR/clab-EVO/Host1",
+      "kind": "linux",
+      "image": "ghcr.io/aristanetworks/aclabs/host-ubuntu:rev1.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.201",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6f4b01a0e9d7",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/anichol/EVPN-SR/clab-EVO/Host1",
+        "clab-node-longname": "Host1",
+        "clab-node-name": "Host1",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/EVPN-SR/lab.yml",
+        "containerlab": "EVO"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22017,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22017,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44317,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44317,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8017,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8017,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "Host2": {
+      "index": "3",
+      "shortname": "Host2",
+      "longname": "Host2",
+      "fqdn": "Host2.EVO.io",
+      "group": "",
+      "labdir": "/home/anichol/EVPN-SR/clab-EVO/Host2",
+      "kind": "linux",
+      "image": "ghcr.io/aristanetworks/aclabs/host-ubuntu:rev1.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.202",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6f4b01a0e9d7",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/anichol/EVPN-SR/clab-EVO/Host2",
+        "clab-node-longname": "Host2",
+        "clab-node-name": "Host2",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/EVPN-SR/lab.yml",
+        "containerlab": "EVO"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22018,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22018,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44318,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44318,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8018,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8018,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "Host3": {
+      "index": "4",
+      "shortname": "Host3",
+      "longname": "Host3",
+      "fqdn": "Host3.EVO.io",
+      "group": "",
+      "labdir": "/home/anichol/EVPN-SR/clab-EVO/Host3",
+      "kind": "linux",
+      "image": "ghcr.io/aristanetworks/aclabs/host-ubuntu:rev1.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.203",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6f4b01a0e9d7",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/anichol/EVPN-SR/clab-EVO/Host3",
+        "clab-node-longname": "Host3",
+        "clab-node-name": "Host3",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/EVPN-SR/lab.yml",
+        "containerlab": "EVO"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22019,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22019,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44319,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44319,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8019,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8019,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "Host4": {
+      "index": "5",
+      "shortname": "Host4",
+      "longname": "Host4",
+      "fqdn": "Host4.EVO.io",
+      "group": "",
+      "labdir": "/home/anichol/EVPN-SR/clab-EVO/Host4",
+      "kind": "linux",
+      "image": "ghcr.io/aristanetworks/aclabs/host-ubuntu:rev1.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.204",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6f4b01a0e9d7",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/anichol/EVPN-SR/clab-EVO/Host4",
+        "clab-node-longname": "Host4",
+        "clab-node-name": "Host4",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/EVPN-SR/lab.yml",
+        "containerlab": "EVO"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44320,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44320,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8020,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8020,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22020,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22020,
+          "port": 22,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "P-03": {
+      "index": "6",
+      "shortname": "P-03",
+      "longname": "P-03",
+      "fqdn": "P-03.EVO.io",
+      "group": "",
+      "labdir": "/home/anichol/EVPN-SR/clab-EVO/P-03",
+      "kind": "ceos",
+      "image": "ceos:4.35.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.106",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:be:29:e0",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6f4b01a0e9d7",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/EVPN-SR/clab-EVO/P-03",
+        "clab-node-longname": "P-03",
+        "clab-node-name": "P-03",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/EVPN-SR/lab.yml",
+        "containerlab": "EVO"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22003,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22003,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44303,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44303,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8003,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8003,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "P-04": {
+      "index": "7",
+      "shortname": "P-04",
+      "longname": "P-04",
+      "fqdn": "P-04.EVO.io",
+      "group": "",
+      "labdir": "/home/anichol/EVPN-SR/clab-EVO/P-04",
+      "kind": "ceos",
+      "image": "ceos:4.35.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.107",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:bf:df:90",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6f4b01a0e9d7",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/EVPN-SR/clab-EVO/P-04",
+        "clab-node-longname": "P-04",
+        "clab-node-name": "P-04",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/EVPN-SR/lab.yml",
+        "containerlab": "EVO"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44304,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44304,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8004,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8004,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22047,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22047,
+          "port": 22,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "P-05": {
+      "index": "8",
+      "shortname": "P-05",
+      "longname": "P-05",
+      "fqdn": "P-05.EVO.io",
+      "group": "",
+      "labdir": "/home/anichol/EVPN-SR/clab-EVO/P-05",
+      "kind": "ceos",
+      "image": "ceos:4.35.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.108",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:9c:13:36",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6f4b01a0e9d7",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/EVPN-SR/clab-EVO/P-05",
+        "clab-node-longname": "P-05",
+        "clab-node-name": "P-05",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/EVPN-SR/lab.yml",
+        "containerlab": "EVO"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8005,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8005,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22005,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22005,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44305,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44305,
+          "port": 443,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "P-06": {
+      "index": "9",
+      "shortname": "P-06",
+      "longname": "P-06",
+      "fqdn": "P-06.EVO.io",
+      "group": "",
+      "labdir": "/home/anichol/EVPN-SR/clab-EVO/P-06",
+      "kind": "ceos",
+      "image": "ceos:4.35.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.109",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:ee:81:d2",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6f4b01a0e9d7",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/EVPN-SR/clab-EVO/P-06",
+        "clab-node-longname": "P-06",
+        "clab-node-name": "P-06",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/EVPN-SR/lab.yml",
+        "containerlab": "EVO"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8006,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8006,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22006,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22006,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44306,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44306,
+          "port": 443,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "PE-01": {
+      "index": "10",
+      "shortname": "PE-01",
+      "longname": "PE-01",
+      "fqdn": "PE-01.EVO.io",
+      "group": "",
+      "labdir": "/home/anichol/EVPN-SR/clab-EVO/PE-01",
+      "kind": "ceos",
+      "image": "ceos:4.35.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.104",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:c7:69:b6",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6f4b01a0e9d7",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/EVPN-SR/clab-EVO/PE-01",
+        "clab-node-longname": "PE-01",
+        "clab-node-name": "PE-01",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/EVPN-SR/lab.yml",
+        "containerlab": "EVO"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22001,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22001,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44301,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44301,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8001,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8001,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "PE-02": {
+      "index": "11",
+      "shortname": "PE-02",
+      "longname": "PE-02",
+      "fqdn": "PE-02.EVO.io",
+      "group": "",
+      "labdir": "/home/anichol/EVPN-SR/clab-EVO/PE-02",
+      "kind": "ceos",
+      "image": "ceos:4.35.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.105",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:e8:c7:4e",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6f4b01a0e9d7",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/EVPN-SR/clab-EVO/PE-02",
+        "clab-node-longname": "PE-02",
+        "clab-node-name": "PE-02",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/EVPN-SR/lab.yml",
+        "containerlab": "EVO"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22002,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22002,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44302,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44302,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8002,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8002,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "PE-07": {
+      "index": "12",
+      "shortname": "PE-07",
+      "longname": "PE-07",
+      "fqdn": "PE-07.EVO.io",
+      "group": "",
+      "labdir": "/home/anichol/EVPN-SR/clab-EVO/PE-07",
+      "kind": "ceos",
+      "image": "ceos:4.35.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.110",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:fd:8b:69",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6f4b01a0e9d7",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/EVPN-SR/clab-EVO/PE-07",
+        "clab-node-longname": "PE-07",
+        "clab-node-name": "PE-07",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/EVPN-SR/lab.yml",
+        "containerlab": "EVO"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22007,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22007,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44007,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44007,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8007,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8007,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "PE-08": {
+      "index": "13",
+      "shortname": "PE-08",
+      "longname": "PE-08",
+      "fqdn": "PE-08.EVO.io",
+      "group": "",
+      "labdir": "/home/anichol/EVPN-SR/clab-EVO/PE-08",
+      "kind": "ceos",
+      "image": "ceos:4.35.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.111",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:88:52:b5",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-6f4b01a0e9d7",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/EVPN-SR/clab-EVO/PE-08",
+        "clab-node-longname": "PE-08",
+        "clab-node-name": "PE-08",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/EVPN-SR/lab.yml",
+        "containerlab": "EVO"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22008,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22008,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44308,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44308,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8008,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8008,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-1",
+          "interface": "et10",
+          "mac": "aa:c1:ab:0f:b5:9b",
+          "peer": "z"
+        },
+        "z": {
+          "node": "Host1",
+          "interface": "et1",
+          "mac": "aa:c1:ab:c2:56:d9",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-1",
+          "interface": "et11",
+          "mac": "aa:c1:ab:bb:b9:8b",
+          "peer": "z"
+        },
+        "z": {
+          "node": "Host2",
+          "interface": "et1",
+          "mac": "aa:c1:ab:47:c3:b6",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-2",
+          "interface": "et10",
+          "mac": "aa:c1:ab:e2:0e:4f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "Host3",
+          "interface": "et1",
+          "mac": "aa:c1:ab:a1:78:8e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-2",
+          "interface": "et11",
+          "mac": "aa:c1:ab:a2:c5:39",
+          "peer": "z"
+        },
+        "z": {
+          "node": "Host4",
+          "interface": "et1",
+          "mac": "aa:c1:ab:94:fc:d5",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-1",
+          "interface": "et1",
+          "mac": "aa:c1:ab:9a:9e:56",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-01",
+          "interface": "et10",
+          "mac": "aa:c1:ab:ae:c2:6c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-1",
+          "interface": "et2",
+          "mac": "aa:c1:ab:00:db:1d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-02",
+          "interface": "et10",
+          "mac": "aa:c1:ab:3d:50:d6",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-2",
+          "interface": "et1",
+          "mac": "aa:c1:ab:76:5c:e9",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-07",
+          "interface": "et10",
+          "mac": "aa:c1:ab:f2:d6:8b",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-2",
+          "interface": "et2",
+          "mac": "aa:c1:ab:b7:2d:1d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-08",
+          "interface": "et10",
+          "mac": "aa:c1:ab:89:f8:af",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "PE-01",
+          "interface": "et4",
+          "mac": "aa:c1:ab:6a:e7:c9",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-03",
+          "interface": "et1",
+          "mac": "aa:c1:ab:d8:03:57",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "PE-01",
+          "interface": "et5",
+          "mac": "aa:c1:ab:4c:82:2f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-04",
+          "interface": "et1",
+          "mac": "aa:c1:ab:35:68:b1",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "PE-01",
+          "interface": "et6",
+          "mac": "aa:c1:ab:24:0e:f1",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-02",
+          "interface": "et6",
+          "mac": "aa:c1:ab:a0:b0:44",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "PE-02",
+          "interface": "et4",
+          "mac": "aa:c1:ab:a0:1c:ab",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-03",
+          "interface": "et2",
+          "mac": "aa:c1:ab:0d:49:66",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "PE-02",
+          "interface": "et5",
+          "mac": "aa:c1:ab:a7:b0:20",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-04",
+          "interface": "et2",
+          "mac": "aa:c1:ab:83:79:50",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-03",
+          "interface": "et4",
+          "mac": "aa:c1:ab:9a:c8:12",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-05",
+          "interface": "et1",
+          "mac": "aa:c1:ab:1e:d1:01",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-03",
+          "interface": "et5",
+          "mac": "aa:c1:ab:f1:cd:71",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-06",
+          "interface": "et1",
+          "mac": "aa:c1:ab:3d:6e:40",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-03",
+          "interface": "et6",
+          "mac": "aa:c1:ab:32:bb:ff",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-04",
+          "interface": "et6",
+          "mac": "aa:c1:ab:0f:78:ff",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-04",
+          "interface": "et4",
+          "mac": "aa:c1:ab:2a:8c:c3",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-05",
+          "interface": "et2",
+          "mac": "aa:c1:ab:2b:31:14",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-04",
+          "interface": "et5",
+          "mac": "aa:c1:ab:ff:75:cf",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-06",
+          "interface": "et2",
+          "mac": "aa:c1:ab:21:f3:f6",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-05",
+          "interface": "et4",
+          "mac": "aa:c1:ab:3c:2d:5f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-07",
+          "interface": "et1",
+          "mac": "aa:c1:ab:fd:c8:39",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-05",
+          "interface": "et5",
+          "mac": "aa:c1:ab:5a:ca:58",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-08",
+          "interface": "et1",
+          "mac": "aa:c1:ab:69:ef:7e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-05",
+          "interface": "et6",
+          "mac": "aa:c1:ab:26:43:f5",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-06",
+          "interface": "et6",
+          "mac": "aa:c1:ab:e0:73:49",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-06",
+          "interface": "et4",
+          "mac": "aa:c1:ab:3d:ce:c0",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-07",
+          "interface": "et2",
+          "mac": "aa:c1:ab:a9:1a:b4",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-06",
+          "interface": "et5",
+          "mac": "aa:c1:ab:a0:71:af",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-08",
+          "interface": "et2",
+          "mac": "aa:c1:ab:b2:28:f5",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "PE-07",
+          "interface": "et6",
+          "mac": "aa:c1:ab:c9:8f:72",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-08",
+          "interface": "et6",
+          "mac": "aa:c1:ab:b1:64:26",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+---
+# --------------------------------------------------------------
+# Leaf Spine SRv6 Topology
+# --------------------------------------------------------------
+
+name: SRv6-Leaf-Spine
+
+prefix: ""
+
+mgmt:
+  network: mgmt
+  ipv4-subnet: 172.100.100.0/24
+
+topology:
+
+  defaults:
+    env:
+      INTFTYPE: et
+
+  kinds:
+    ceos:
+      image: ceos:4.34.2F 
+      env:
+        CLAB_MGMT_VRF: MGMT
+    linux:
+      image: ghcr.io/aristanetworks/aclabs/host-ubuntu:rev1.0
+
+  nodes:
+
+    EOS1:
+      kind: ceos
+      mgmt-ipv4: 172.100.100.101
+      binds:
+        - sn/eos1.txt:/mnt/flash/ceos-config:ro
+        - toggles/toggle_override:/mnt/flash/toggle_override
+      startup-config: init-configs/EOS1.cfg
+      ports:
+        - '22001:22'
+        - '8001:80'
+        - '44301:443'
+      labels:
+        graph-posX: "925"
+        graph-posY: "255"
+        graph-groupLabelPos: bottom-center
+
+    EOS2:
+      kind: ceos
+      mgmt-ipv4: 172.100.100.102
+      binds:
+        - sn/eos2.txt:/mnt/flash/ceos-config:ro
+        - toggles/toggle_override:/mnt/flash/toggle_override
+      startup-config: init-configs/EOS2.cfg
+      ports:
+        - '22002:22'
+        - '8002:80'
+        - '44302:443'
+      labels:
+        graph-posX: "1055"
+        graph-posY: "255"
+        graph-groupLabelPos: bottom-center
+
+    EOS3:
+      kind: ceos
+      mgmt-ipv4: 172.100.100.103
+      binds:
+        - sn/eos3.txt:/mnt/flash/ceos-config:ro
+        - toggles/toggle_override:/mnt/flash/toggle_override
+      startup-config: init-configs/EOS3.cfg
+      ports:
+        - '22003:22'
+        - '8003:80'
+        - '44303:443'
+      labels:
+        graph-posX: "925"
+        graph-posY: "325"
+        graph-groupLabelPos: bottom-center
+    EOS4:
+      kind: ceos
+      mgmt-ipv4: 172.100.100.104
+      binds:
+        - sn/eos4.txt:/mnt/flash/ceos-config:ro
+        - toggles/toggle_override:/mnt/flash/toggle_override
+      startup-config: init-configs/EOS4.cfg
+      ports:
+        - '22004:22'
+        - '8004:80'
+        - '44304:443'
+      labels:
+        graph-posX: "1055"
+        graph-posY: "325"
+        graph-groupLabelPos: bottom-center
+    EOS5:
+      kind: ceos
+      mgmt-ipv4: 172.100.100.105
+      binds:
+        - sn/eos1.txt:/mnt/flash/ceos-config:ro
+        - toggles/toggle_override:/mnt/flash/toggle_override
+      startup-config: init-configs/EOS1.cfg
+      ports:
+        - '22005:22'
+        - '8005:80'
+        - '44305:443'
+      labels:
+        graph-posX: "925"
+        graph-posY: "255"
+        graph-groupLabelPos: bottom-center
+
+    EOS6:
+      kind: ceos
+      mgmt-ipv4: 172.100.100.106
+      binds:
+        - sn/eos2.txt:/mnt/flash/ceos-config:ro
+        - toggles/toggle_override:/mnt/flash/toggle_override
+      startup-config: init-configs/EOS2.cfg
+      ports:
+        - '22006:22'
+        - '8006:80'
+        - '44306:443'
+      labels:
+        graph-posX: "1055"
+        graph-posY: "255"
+        graph-groupLabelPos: bottom-center  
+
+    Host1:
+      kind: linux
+      mgmt-ipv4: 172.100.100.201
+      env:
+        IPV4: 10.10.10.101/24
+        STATIC_ROUTE: 10.0.0.0/8
+        GW: 10.10.10.1
+        IPV6: 2001:db8:10:10::101/64
+      ports:
+        - '22201:22'
+      labels:
+        graph-posX: "975"
+        graph-posY: "355"
+        graph-groupLabelPos: bottom-center
+
+    Host2:
+      kind: linux
+      mgmt-ipv4: 172.100.100.202
+      env:
+        IPV4: 10.20.20.101/24
+        STATIC_ROUTE: 10.0.0.0/8
+        GW: 10.20.20.1
+        IPV6: 2001:db8:20:20::101/64
+      ports:
+        - '22202:22'
+      labels:
+        graph-posX: "1015"
+        graph-posY: "355"
+        graph-groupLabelPos: bottom-centeri
+    Host3:
+      kind: linux
+      mgmt-ipv4: 172.100.100.203
+      env:
+        IPV4: 10.20.20.103/24
+        STATIC_ROUTE: 10.0.0.0/8
+        GW: 10.20.20.1
+        IPV6: 2001:db8:20:20::103/64
+      ports:
+        - '22203:22'
+      labels:
+        graph-posX: "1015"
+        graph-posY: "355"
+        graph-groupLabelPos: bottom-center
+    Host4:
+      kind: linux
+      mgmt-ipv4: 172.100.100.204
+      env:
+        IPV4: 10.20.20.104/24
+        STATIC_ROUTE: 10.0.0.0/8
+        GW: 10.20.20.1
+        IPV6: 2001:db8:20:20::104/64
+      ports:
+        - '22204:22'
+      labels:
+        graph-posX: "1015"
+        graph-posY: "355"
+        graph-groupLabelPos: bottom-center      
+        
+
+  links:
+    - endpoints: [ "EOS1:et1", "EOS5:et1" ]
+    - endpoints: [ "EOS1:et2", "EOS6:et1" ]
+    - endpoints: [ "EOS2:et1", "EOS5:et2" ]
+    - endpoints: [ "EOS2:et2", "EOS6:et2" ]
+    - endpoints: [ "EOS3:et1", "EOS5:et3" ]
+    - endpoints: [ "EOS3:et2", "EOS6:et3" ]
+    - endpoints: [ "EOS4:et1", "EOS5:et4" ]
+    - endpoints: [ "EOS4:et1", "EOS6:et4" ]
+    - endpoints: [ "Host1:et1", "EOS1:et10" ]
+    - endpoints: [ "Host2:et1", "EOS2:et10" ]
+    - endpoints: [ "Host3:et1", "EOS3:et10" ]
+    - endpoints: [ "Host4:et1", "EOS4:et10" ]

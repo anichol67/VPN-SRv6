@@ -1,0 +1,175 @@
+{
+  "freeTextAnnotations": [],
+  "groupStyleAnnotations": [],
+  "cloudNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "PE-01",
+      "icon": "router",
+      "position": {
+        "x": 7,
+        "y": 7
+      },
+      "geoCoordinates": {
+        "lat": 48.92268403125941,
+        "lng": 9.405038247768534
+      }
+    },
+    {
+      "id": "PE-02",
+      "icon": "router",
+      "position": {
+        "x": 7,
+        "y": 147
+      },
+      "geoCoordinates": {
+        "lat": 49.12268403125941,
+        "lng": 9.605038247768535
+      }
+    },
+    {
+      "id": "P-03",
+      "icon": "router",
+      "position": {
+        "x": 105,
+        "y": 7
+      },
+      "geoCoordinates": {
+        "lat": 49.06054117411655,
+        "lng": 9.502181104911392
+      }
+    },
+    {
+      "id": "P-04",
+      "icon": "router",
+      "position": {
+        "x": 105,
+        "y": 147
+      },
+      "geoCoordinates": {
+        "lat": 49.260541174116554,
+        "lng": 9.702181104911393
+      }
+    },
+    {
+      "id": "P-05",
+      "icon": "router",
+      "position": {
+        "x": 203,
+        "y": 7
+      },
+      "geoCoordinates": {
+        "lat": 49.322684031259406,
+        "lng": 9.805038247768534
+      }
+    },
+    {
+      "id": "P-06",
+      "icon": "router",
+      "position": {
+        "x": 203,
+        "y": 147
+      },
+      "geoCoordinates": {
+        "lat": 49.52268403125941,
+        "lng": 10.005038247768534
+      }
+    },
+    {
+      "id": "PE-07",
+      "icon": "router",
+      "position": {
+        "x": 301,
+        "y": 7
+      },
+      "geoCoordinates": {
+        "lat": 49.722684031259405,
+        "lng": 9.305038247768534
+      }
+    },
+    {
+      "id": "PE-08",
+      "icon": "router",
+      "position": {
+        "x": 301,
+        "y": 147
+      },
+      "geoCoordinates": {
+        "lat": 49.02268403125941,
+        "lng": 9.505038247768534
+      }
+    },
+    {
+      "id": "CE-1",
+      "icon": "router",
+      "position": {
+        "x": -49,
+        "y": 77
+      },
+      "geoCoordinates": {
+        "lat": 49.222684031259405,
+        "lng": 9.705038247768535
+      }
+    },
+    {
+      "id": "CE-2",
+      "icon": "router",
+      "position": {
+        "x": 357,
+        "y": 77
+      },
+      "geoCoordinates": {
+        "lat": 49.42268403125941,
+        "lng": 9.905038247768534
+      }
+    },
+    {
+      "id": "Host1",
+      "icon": "router",
+      "position": {
+        "x": -105,
+        "y": 49
+      },
+      "geoCoordinates": {
+        "lat": 48.684826888402256,
+        "lng": 9.007895390625677
+      }
+    },
+    {
+      "id": "Host2",
+      "icon": "router",
+      "position": {
+        "x": -105,
+        "y": 105
+      },
+      "geoCoordinates": {
+        "lat": 48.684826888402256,
+        "lng": 9.007895390625677
+      }
+    },
+    {
+      "id": "Host3",
+      "icon": "router",
+      "position": {
+        "x": 399,
+        "y": 49
+      },
+      "geoCoordinates": {
+        "lat": 49.62268403125941,
+        "lng": 10.105038247768535
+      }
+    },
+    {
+      "id": "Host4",
+      "icon": "router",
+      "position": {
+        "x": 399,
+        "y": 105
+      },
+      "geoCoordinates": {
+        "lat": 48.92268403125941,
+        "lng": 9.405038247768534
+      }
+    }
+  ]
+}
