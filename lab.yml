@@ -19,7 +19,7 @@ topology:
 
   kinds:
     ceos:
-      image: ceos:4.35.0F
+      image: ceos:ceos-anthropic-eft1
       env:
         CLAB_MGMT_VRF: MGMT
     linux:
