@@ -1,6 +1,6 @@
 # --------------------------------------------------------------
 # VPN Services with SRv6 core
-# VPWS, IRB, OISM, IP-VPN
+# IPv6 (default) , IP-VPN, EVPN (T-5) and FlexAlgo
 # --------------------------------------------------------------
 
 name: VPN-SRv6
@@ -19,7 +19,7 @@ topology:
 
   kinds:
     ceos:
-      image: ceos:ceos-anthropic-eft1
+      image: ceos:4.35.2-SRv6-EFT1 
       env:
         CLAB_MGMT_VRF: MGMT
     linux:
