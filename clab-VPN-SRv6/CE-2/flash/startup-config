@@ -1,5 +1,5 @@
-! Startup-config last modified at Thu Jan  8 17:55:31 2026 by root
-! device: CE-02 (cEOSLab, EOS-4.35.1F-45100036.rhineFXanthropic1rel (engineering build))
+! Startup-config last modified at Thu Jan  8 19:58:00 2026 by root
+! device: CE-02 (cEOSLab, EOS-4.35.2F-45641603.seineFXanthropic1rel (engineering build))
 !
 no aaa root
 !
@@ -82,12 +82,5 @@ no ip routing vrf MGMT
 ip route 2.0.0.0/24 Null0
 ip route 2.1.1.0/24 Null0
 ip route vrf MGMT 0.0.0.0/0 172.100.100.1
-!
-router multicast
-   ipv4
-      software-forwarding kernel
-   !
-   ipv6
-      software-forwarding kernel
 !
 end

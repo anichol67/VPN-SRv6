@@ -1,5 +1,5 @@
-! Startup-config last modified at Thu Jan  8 17:55:31 2026 by root
-! device: PE-08 (cEOSLab, EOS-4.35.1F-45100036.rhineFXanthropic1rel (engineering build))
+! Startup-config last modified at Thu Jan  8 19:58:00 2026 by root
+! device: PE-08 (cEOSLab, EOS-4.35.2F-45641603.seineFXanthropic1rel (engineering build))
 !
 no aaa root
 !
@@ -255,25 +255,12 @@ router isis sr_instance
       fast-reroute ti-lfa mode link-protection level-2
    !
    address-family ipv6 unicast
-      srv6
-         flex-algo low-latency
-         !
-         locator Default
-         !
-         locator Flex-128
    !
    segment-routing mpls
       no shutdown
       flex-algo best-effort level-2 advertised
       flex-algo high-bandwidth level-2 advertised
       flex-algo low-latency level-2 advertised
-!
-router multicast
-   ipv4
-      software-forwarding kernel
-   !
-   ipv6
-      software-forwarding kernel
 !
 router srv6
    vrf default

@@ -1,5 +1,5 @@
-! Startup-config last modified at Thu Jan  8 17:55:31 2026 by root
-! device: P-03 (cEOSLab, EOS-4.35.1F-45100036.rhineFXanthropic1rel (engineering build))
+! Startup-config last modified at Thu Jan  8 19:58:00 2026 by root
+! device: P-03 (cEOSLab, EOS-4.35.2F-45641603.seineFXanthropic1rel (engineering build))
 !
 no aaa root
 !
@@ -174,8 +174,9 @@ router bgp 64512
    neighbor fc00:0:1::8 peer group IPv6-RR-CLIENTS
    !
    address-family evpn
-      neighbor default encapsulation mpls next-hop-self source-interface Loopback0
+      neighbor default encapsulation srv6 locator Flex-128
       neighbor EVPN-RR-CLIENTS activate
+      neighbor IPv6-RR-CLIENTS activate
    !
    address-family ipv6
       neighbor IPv6-RR-CLIENTS activate
@@ -211,25 +212,12 @@ router isis sr_instance
       fast-reroute ti-lfa mode link-protection level-2
    !
    address-family ipv6 unicast
-      srv6
-         flex-algo low-latency
-         !
-         locator Default
-         !
-         locator Flex-128
    !
    segment-routing mpls
       no shutdown
       flex-algo best-effort level-2 advertised
       flex-algo high-bandwidth level-2 advertised
       flex-algo low-latency level-2 advertised
-!
-router multicast
-   ipv4
-      software-forwarding kernel
-   !
-   ipv6
-      software-forwarding kernel
 !
 router srv6
    vrf default
