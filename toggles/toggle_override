@@ -6,3 +6,8 @@ EvpnUmr=1
 EvpnType1Esi=1
 EvpnL3DciRdRt=1
 NewMMplsOutPipeline=1
+Srv6IsisFlexAlgo=1
+Srv6AdjSid=1
+SRv6MplsVpn=1
+SRv6BgpL3Vpn=1
+
