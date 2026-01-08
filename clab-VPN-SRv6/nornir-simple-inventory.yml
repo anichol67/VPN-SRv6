@@ -1,0 +1,71 @@
+---
+CE-1:
+    username: admin
+    password: admin
+    platform: ceos
+    hostname: 172.100.100.112
+CE-2:
+    username: admin
+    password: admin
+    platform: ceos
+    hostname: 172.100.100.113
+P-03:
+    username: admin
+    password: admin
+    platform: ceos
+    hostname: 172.100.100.106
+P-04:
+    username: admin
+    password: admin
+    platform: ceos
+    hostname: 172.100.100.107
+P-05:
+    username: admin
+    password: admin
+    platform: ceos
+    hostname: 172.100.100.108
+P-06:
+    username: admin
+    password: admin
+    platform: ceos
+    hostname: 172.100.100.109
+PE-01:
+    username: admin
+    password: admin
+    platform: ceos
+    hostname: 172.100.100.104
+PE-02:
+    username: admin
+    password: admin
+    platform: ceos
+    hostname: 172.100.100.105
+PE-07:
+    username: admin
+    password: admin
+    platform: ceos
+    hostname: 172.100.100.110
+PE-08:
+    username: admin
+    password: admin
+    platform: ceos
+    hostname: 172.100.100.111
+Host1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.100.100.201
+Host2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.100.100.202
+Host3:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.100.100.203
+Host4:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.100.100.204

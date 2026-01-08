@@ -1,0 +1,1343 @@
+{
+  "name": "VPN-SRv6",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "",
+      "mgmt": {
+        "network": "mgmt",
+        "bridge": "br-d2832279c791",
+        "ipv4-subnet": "172.100.100.0/24",
+        "ipv4-gw": "172.100.100.1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDbs5RKBlP+sKQ4Y0Vxf8hD3C/jWC4Bb3jrNlO73cmnLRvorglwTXFuyplxG+UPDkb5LqtzUm/EgSd+HUpkMIaREqcOIkmdLeDUH3Txlnn4tIlSY8OTzfoRzLX4bdOeKfbt6YLAN7Lg0/zPhlOK+L0SIMbqxkOzm2A8RMc0jHTDkbEEUfXs7AP4o08nGPqokoSOspMMK/9hiqgVneLdEjUcONfTCBQlZ8LuHoyOiQk3oyMUN7uB1AOD+KxJE7bMS4/y7BPu++2eucoldXEBT56Ghr/xDTOhQfehda8AN6E3p/VzLWTLB435AQmvk+oKO7kFe6WOVEHZhwvyB5Hjti0qstYRTb6tcetO1MrBgq9x4xasEzSKym3dYlaSRS+yKTOFYvJw842rS9BAUXo90+CrCF4uJbFwF1awbI1yjsMBpJv7Wo4LvOBXq4WsR2cR3jaeN/uy/d1GuKX1zwnpqPauoNefXH24p26zqy+EeFdh/AJ/sJgdVFEapebt7/Me0G0="],
+  "nodes": {
+    "CE-1": {
+      "index": "0",
+      "shortname": "CE-1",
+      "longname": "CE-1",
+      "fqdn": "CE-1.VPN-SRv6.io",
+      "group": "",
+      "labdir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/CE-1",
+      "kind": "ceos",
+      "image": "ceos:ceos-anthropic-eft1",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.112",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:14:1d:fc",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d2832279c791",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/CE-1",
+        "clab-node-longname": "CE-1",
+        "clab-node-name": "CE-1",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/VPN-SRv6/lab.yml",
+        "containerlab": "VPN-SRv6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22015,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22015,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44315,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44315,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8015,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8015,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "CE-2": {
+      "index": "1",
+      "shortname": "CE-2",
+      "longname": "CE-2",
+      "fqdn": "CE-2.VPN-SRv6.io",
+      "group": "",
+      "labdir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/CE-2",
+      "kind": "ceos",
+      "image": "ceos:ceos-anthropic-eft1",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.113",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:fe:4f:62",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d2832279c791",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/CE-2",
+        "clab-node-longname": "CE-2",
+        "clab-node-name": "CE-2",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/VPN-SRv6/lab.yml",
+        "containerlab": "VPN-SRv6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22016,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22016,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44316,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44316,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8016,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8016,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "Host1": {
+      "index": "2",
+      "shortname": "Host1",
+      "longname": "Host1",
+      "fqdn": "Host1.VPN-SRv6.io",
+      "group": "",
+      "labdir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/Host1",
+      "kind": "linux",
+      "image": "ghcr.io/aristanetworks/aclabs/host-ubuntu:rev1.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.201",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d2832279c791",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/Host1",
+        "clab-node-longname": "Host1",
+        "clab-node-name": "Host1",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/VPN-SRv6/lab.yml",
+        "containerlab": "VPN-SRv6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22017,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22017,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44317,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44317,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8017,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8017,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "Host2": {
+      "index": "3",
+      "shortname": "Host2",
+      "longname": "Host2",
+      "fqdn": "Host2.VPN-SRv6.io",
+      "group": "",
+      "labdir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/Host2",
+      "kind": "linux",
+      "image": "ghcr.io/aristanetworks/aclabs/host-ubuntu:rev1.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.202",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d2832279c791",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/Host2",
+        "clab-node-longname": "Host2",
+        "clab-node-name": "Host2",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/VPN-SRv6/lab.yml",
+        "containerlab": "VPN-SRv6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22018,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22018,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44318,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44318,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8018,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8018,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "Host3": {
+      "index": "4",
+      "shortname": "Host3",
+      "longname": "Host3",
+      "fqdn": "Host3.VPN-SRv6.io",
+      "group": "",
+      "labdir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/Host3",
+      "kind": "linux",
+      "image": "ghcr.io/aristanetworks/aclabs/host-ubuntu:rev1.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.203",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d2832279c791",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/Host3",
+        "clab-node-longname": "Host3",
+        "clab-node-name": "Host3",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/VPN-SRv6/lab.yml",
+        "containerlab": "VPN-SRv6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22019,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22019,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44319,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44319,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8019,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8019,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "Host4": {
+      "index": "5",
+      "shortname": "Host4",
+      "longname": "Host4",
+      "fqdn": "Host4.VPN-SRv6.io",
+      "group": "",
+      "labdir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/Host4",
+      "kind": "linux",
+      "image": "ghcr.io/aristanetworks/aclabs/host-ubuntu:rev1.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.100.100.204",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d2832279c791",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/Host4",
+        "clab-node-longname": "Host4",
+        "clab-node-name": "Host4",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/VPN-SRv6/lab.yml",
+        "containerlab": "VPN-SRv6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22020,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22020,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44320,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44320,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8020,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8020,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "P-03": {
+      "index": "6",
+      "shortname": "P-03",
+      "longname": "P-03",
+      "fqdn": "P-03.VPN-SRv6.io",
+      "group": "",
+      "labdir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/P-03",
+      "kind": "ceos",
+      "image": "ceos:ceos-anthropic-eft1",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.106",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:89:f0:88",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d2832279c791",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/P-03",
+        "clab-node-longname": "P-03",
+        "clab-node-name": "P-03",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/VPN-SRv6/lab.yml",
+        "containerlab": "VPN-SRv6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22003,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22003,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44303,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44303,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8003,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8003,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "P-04": {
+      "index": "7",
+      "shortname": "P-04",
+      "longname": "P-04",
+      "fqdn": "P-04.VPN-SRv6.io",
+      "group": "",
+      "labdir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/P-04",
+      "kind": "ceos",
+      "image": "ceos:ceos-anthropic-eft1",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.107",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:3d:3f:f4",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d2832279c791",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/P-04",
+        "clab-node-longname": "P-04",
+        "clab-node-name": "P-04",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/VPN-SRv6/lab.yml",
+        "containerlab": "VPN-SRv6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22047,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22047,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44304,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44304,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8004,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8004,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "P-05": {
+      "index": "8",
+      "shortname": "P-05",
+      "longname": "P-05",
+      "fqdn": "P-05.VPN-SRv6.io",
+      "group": "",
+      "labdir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/P-05",
+      "kind": "ceos",
+      "image": "ceos:ceos-anthropic-eft1",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.108",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:30:73:e4",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d2832279c791",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/P-05",
+        "clab-node-longname": "P-05",
+        "clab-node-name": "P-05",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/VPN-SRv6/lab.yml",
+        "containerlab": "VPN-SRv6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22005,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22005,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44305,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44305,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8005,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8005,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "P-06": {
+      "index": "9",
+      "shortname": "P-06",
+      "longname": "P-06",
+      "fqdn": "P-06.VPN-SRv6.io",
+      "group": "",
+      "labdir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/P-06",
+      "kind": "ceos",
+      "image": "ceos:ceos-anthropic-eft1",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.109",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:d0:94:24",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d2832279c791",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/P-06",
+        "clab-node-longname": "P-06",
+        "clab-node-name": "P-06",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/VPN-SRv6/lab.yml",
+        "containerlab": "VPN-SRv6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22006,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22006,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44306,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44306,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8006,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8006,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "PE-01": {
+      "index": "10",
+      "shortname": "PE-01",
+      "longname": "PE-01",
+      "fqdn": "PE-01.VPN-SRv6.io",
+      "group": "",
+      "labdir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/PE-01",
+      "kind": "ceos",
+      "image": "ceos:ceos-anthropic-eft1",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.104",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:ac:e1:f3",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d2832279c791",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/PE-01",
+        "clab-node-longname": "PE-01",
+        "clab-node-name": "PE-01",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/VPN-SRv6/lab.yml",
+        "containerlab": "VPN-SRv6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22001,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22001,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44301,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44301,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8001,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8001,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "PE-02": {
+      "index": "11",
+      "shortname": "PE-02",
+      "longname": "PE-02",
+      "fqdn": "PE-02.VPN-SRv6.io",
+      "group": "",
+      "labdir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/PE-02",
+      "kind": "ceos",
+      "image": "ceos:ceos-anthropic-eft1",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.105",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:0b:5d:5b",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d2832279c791",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/PE-02",
+        "clab-node-longname": "PE-02",
+        "clab-node-name": "PE-02",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/VPN-SRv6/lab.yml",
+        "containerlab": "VPN-SRv6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22002,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22002,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44302,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44302,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8002,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8002,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "PE-07": {
+      "index": "12",
+      "shortname": "PE-07",
+      "longname": "PE-07",
+      "fqdn": "PE-07.VPN-SRv6.io",
+      "group": "",
+      "labdir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/PE-07",
+      "kind": "ceos",
+      "image": "ceos:ceos-anthropic-eft1",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.110",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:fc:6c:c0",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d2832279c791",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/PE-07",
+        "clab-node-longname": "PE-07",
+        "clab-node-name": "PE-07",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/VPN-SRv6/lab.yml",
+        "containerlab": "VPN-SRv6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8007,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8007,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22007,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22007,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44007,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44007,
+          "port": 443,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "PE-08": {
+      "index": "13",
+      "shortname": "PE-08",
+      "longname": "PE-08",
+      "fqdn": "PE-08.VPN-SRv6.io",
+      "group": "",
+      "labdir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/PE-08",
+      "kind": "ceos",
+      "image": "ceos:ceos-anthropic-eft1",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.111",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:8c:6d:6c",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d2832279c791",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/PE-08",
+        "clab-node-longname": "PE-08",
+        "clab-node-name": "PE-08",
+        "clab-node-type": "",
+        "clab-owner": "anichol",
+        "clab-topo-file": "/home/anichol/VPN-SRv6/lab.yml",
+        "containerlab": "VPN-SRv6"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22008,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22008,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 44308,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44308,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8008,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8008,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-1",
+          "interface": "et10",
+          "mac": "aa:c1:ab:3a:be:db",
+          "peer": "z"
+        },
+        "z": {
+          "node": "Host1",
+          "interface": "et1",
+          "mac": "aa:c1:ab:e6:b4:ec",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-1",
+          "interface": "et11",
+          "mac": "aa:c1:ab:4d:7a:a5",
+          "peer": "z"
+        },
+        "z": {
+          "node": "Host2",
+          "interface": "et1",
+          "mac": "aa:c1:ab:c3:0e:d9",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-2",
+          "interface": "et10",
+          "mac": "aa:c1:ab:52:1a:59",
+          "peer": "z"
+        },
+        "z": {
+          "node": "Host3",
+          "interface": "et1",
+          "mac": "aa:c1:ab:64:6d:91",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-2",
+          "interface": "et11",
+          "mac": "aa:c1:ab:da:42:ee",
+          "peer": "z"
+        },
+        "z": {
+          "node": "Host4",
+          "interface": "et1",
+          "mac": "aa:c1:ab:ab:5c:1a",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-1",
+          "interface": "et1",
+          "mac": "aa:c1:ab:90:95:b3",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-01",
+          "interface": "et10",
+          "mac": "aa:c1:ab:d6:b1:b9",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-1",
+          "interface": "et2",
+          "mac": "aa:c1:ab:c1:85:d9",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-02",
+          "interface": "et10",
+          "mac": "aa:c1:ab:74:45:fe",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-2",
+          "interface": "et1",
+          "mac": "aa:c1:ab:2a:fe:14",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-07",
+          "interface": "et10",
+          "mac": "aa:c1:ab:5f:61:01",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "CE-2",
+          "interface": "et2",
+          "mac": "aa:c1:ab:17:e9:24",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-08",
+          "interface": "et10",
+          "mac": "aa:c1:ab:f2:79:aa",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "PE-01",
+          "interface": "et4",
+          "mac": "aa:c1:ab:70:1a:85",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-03",
+          "interface": "et1",
+          "mac": "aa:c1:ab:fa:be:70",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "PE-01",
+          "interface": "et5",
+          "mac": "aa:c1:ab:7d:63:ae",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-04",
+          "interface": "et1",
+          "mac": "aa:c1:ab:b2:c4:d6",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "PE-01",
+          "interface": "et6",
+          "mac": "aa:c1:ab:ac:5d:30",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-02",
+          "interface": "et6",
+          "mac": "aa:c1:ab:b8:fb:ea",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "PE-02",
+          "interface": "et4",
+          "mac": "aa:c1:ab:6f:22:78",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-03",
+          "interface": "et2",
+          "mac": "aa:c1:ab:ba:4e:40",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "PE-02",
+          "interface": "et5",
+          "mac": "aa:c1:ab:c8:a9:45",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-04",
+          "interface": "et2",
+          "mac": "aa:c1:ab:f3:5d:e5",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-03",
+          "interface": "et4",
+          "mac": "aa:c1:ab:f1:a4:ff",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-05",
+          "interface": "et1",
+          "mac": "aa:c1:ab:6e:8e:ed",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-03",
+          "interface": "et5",
+          "mac": "aa:c1:ab:d4:4c:93",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-06",
+          "interface": "et1",
+          "mac": "aa:c1:ab:36:fe:3b",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-03",
+          "interface": "et6",
+          "mac": "aa:c1:ab:35:1a:52",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-04",
+          "interface": "et6",
+          "mac": "aa:c1:ab:0f:1e:b7",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-04",
+          "interface": "et4",
+          "mac": "aa:c1:ab:67:8b:ca",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-05",
+          "interface": "et2",
+          "mac": "aa:c1:ab:b3:fa:e6",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-04",
+          "interface": "et5",
+          "mac": "aa:c1:ab:7c:ad:2e",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-06",
+          "interface": "et2",
+          "mac": "aa:c1:ab:ec:35:dd",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-05",
+          "interface": "et4",
+          "mac": "aa:c1:ab:97:79:60",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-07",
+          "interface": "et1",
+          "mac": "aa:c1:ab:63:13:2f",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-05",
+          "interface": "et5",
+          "mac": "aa:c1:ab:c8:38:60",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-08",
+          "interface": "et1",
+          "mac": "aa:c1:ab:d3:b4:ea",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-05",
+          "interface": "et6",
+          "mac": "aa:c1:ab:12:80:0e",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-06",
+          "interface": "et6",
+          "mac": "aa:c1:ab:9d:7c:ef",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-06",
+          "interface": "et4",
+          "mac": "aa:c1:ab:66:2f:ca",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-07",
+          "interface": "et2",
+          "mac": "aa:c1:ab:e3:70:bd",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "P-06",
+          "interface": "et5",
+          "mac": "aa:c1:ab:8a:a0:fc",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-08",
+          "interface": "et2",
+          "mac": "aa:c1:ab:2d:7e:6e",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "PE-07",
+          "interface": "et6",
+          "mac": "aa:c1:ab:fc:ca:49",
+          "peer": "z"
+        },
+        "z": {
+          "node": "PE-08",
+          "interface": "et6",
+          "mac": "aa:c1:ab:93:3c:30",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}
