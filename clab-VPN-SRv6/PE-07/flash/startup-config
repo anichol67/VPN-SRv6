@@ -1,5 +1,5 @@
-! Startup-config last modified at Thu Jan  8 17:55:31 2026 by root
-! device: PE-07 (cEOSLab, EOS-4.35.1F-45100036.rhineFXanthropic1rel (engineering build))
+! Startup-config last modified at Thu Jan  8 19:58:00 2026 by root
+! device: PE-07 (cEOSLab, EOS-4.35.2F-45641603.seineFXanthropic1rel (engineering build))
 !
 no aaa root
 !
@@ -146,6 +146,7 @@ interface Vlan10
 interface Vlan20
    vrf tenant-a
    ip address virtual 10.10.20.254/24
+   ipv6 address virtual fd00::a:a:14:fe/120
 !
 interface Vxlan1
    vxlan source-interface Loopback0
@@ -210,6 +211,7 @@ router bgp 64512
       redistribute learned
    !
    address-family evpn
+      neighbor default encapsulation srv6 locator Flex-128
       neighbor 1.0.1.3 activate
       neighbor 1.0.1.3 encapsulation mpls next-hop-self source-interface Loopback0
       neighbor fc00:0:1::3 activate
@@ -260,25 +262,12 @@ router isis sr_instance
       fast-reroute ti-lfa mode link-protection level-2
    !
    address-family ipv6 unicast
-      srv6
-         flex-algo low-latency
-         !
-         locator Default
-         !
-         locator Flex-128
    !
    segment-routing mpls
       no shutdown
       flex-algo best-effort level-2 advertised
       flex-algo high-bandwidth level-2 advertised
       flex-algo low-latency level-2 advertised
-!
-router multicast
-   ipv4
-      software-forwarding kernel
-   !
-   ipv6
-      software-forwarding kernel
 !
 router srv6
    vrf default
