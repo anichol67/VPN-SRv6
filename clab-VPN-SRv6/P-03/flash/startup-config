@@ -1,4 +1,4 @@
-! Startup-config last modified at Thu Jan  8 19:58:00 2026 by root
+! Startup-config last modified at Thu Jan 15 13:37:26 2026 by root
 ! device: P-03 (cEOSLab, EOS-4.35.2F-45641603.seineFXanthropic1rel (engineering build))
 !
 no aaa root
@@ -160,6 +160,13 @@ mpls ldp
 router bgp 64512
    router-id 1.0.1.3
    neighbor EVPN-RR-CLIENTS peer group
+   neighbor EVPN-RR-CLIENTS remote-as 64512
+   neighbor EVPN-RR-CLIENTS next-hop-unchanged
+   neighbor EVPN-RR-CLIENTS update-source Loopback0
+   neighbor EVPN-RR-CLIENTS route-reflector-client
+   neighbor EVPN-RR-CLIENTS additional-paths send any
+   neighbor EVPN-RR-CLIENTS send-community extended
+   neighbor EVPN-RR-CLIENTS maximum-routes 12000
    neighbor IPv6-RR-CLIENTS peer group
    neighbor IPv6-RR-CLIENTS remote-as 64512
    neighbor IPv6-RR-CLIENTS next-hop-unchanged
@@ -168,6 +175,10 @@ router bgp 64512
    neighbor IPv6-RR-CLIENTS additional-paths send any
    neighbor IPv6-RR-CLIENTS send-community extended
    neighbor IPv6-RR-CLIENTS maximum-routes 12000
+   neighbor 1.0.1.1 peer group EVPN-RR-CLIENTS
+   neighbor 1.0.1.2 peer group EVPN-RR-CLIENTS
+   neighbor 1.0.1.7 peer group EVPN-RR-CLIENTS
+   neighbor 1.0.1.8 peer group EVPN-RR-CLIENTS
    neighbor fc00:0:1::1 peer group IPv6-RR-CLIENTS
    neighbor fc00:0:1::2 peer group IPv6-RR-CLIENTS
    neighbor fc00:0:1::7 peer group IPv6-RR-CLIENTS
@@ -234,6 +245,5 @@ router srv6
       !
       locator Flex-128
          prefix micro-segment domain Flex-128 end usid 3
-         igp algorithm flex-algo low-latency
 !
 end

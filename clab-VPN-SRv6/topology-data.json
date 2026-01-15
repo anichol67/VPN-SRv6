@@ -6,7 +6,7 @@
       "prefix": "",
       "mgmt": {
         "network": "mgmt",
-        "bridge": "br-346fd3b8ba60",
+        "bridge": "br-d6d7ab30ff44",
         "ipv4-subnet": "172.100.100.0/24",
         "ipv4-gw": "172.100.100.1",
         "external-access": true
@@ -30,9 +30,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:b3:9f:89",
+      "mac-address": "00:1c:73:bf:0e:0c",
       "labels": {
-        "clab-mgmt-net-bridge": "br-346fd3b8ba60",
+        "clab-mgmt-net-bridge": "br-d6d7ab30ff44",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/CE-1",
@@ -46,6 +46,18 @@
       "port-bindings": [
         {
           "host-ip": "0.0.0.0",
+          "host-port": 8015,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8015,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
           "host-port": 22015,
           "port": 22,
           "protocol": "tcp"
@@ -66,18 +78,6 @@
           "host-ip": "::",
           "host-port": 44315,
           "port": 443,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "0.0.0.0",
-          "host-port": 8015,
-          "port": 80,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "::",
-          "host-port": 8015,
-          "port": 80,
           "protocol": "tcp"
         }
       ]
@@ -97,9 +97,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:4a:c2:8d",
+      "mac-address": "00:1c:73:b8:bd:3a",
       "labels": {
-        "clab-mgmt-net-bridge": "br-346fd3b8ba60",
+        "clab-mgmt-net-bridge": "br-d6d7ab30ff44",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/CE-2",
@@ -166,7 +166,7 @@
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-346fd3b8ba60",
+        "clab-mgmt-net-bridge": "br-d6d7ab30ff44",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/Host1",
@@ -233,7 +233,7 @@
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-346fd3b8ba60",
+        "clab-mgmt-net-bridge": "br-d6d7ab30ff44",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/Host2",
@@ -300,7 +300,7 @@
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-346fd3b8ba60",
+        "clab-mgmt-net-bridge": "br-d6d7ab30ff44",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/Host3",
@@ -314,18 +314,6 @@
       "port-bindings": [
         {
           "host-ip": "0.0.0.0",
-          "host-port": 22019,
-          "port": 22,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "::",
-          "host-port": 22019,
-          "port": 22,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "0.0.0.0",
           "host-port": 44319,
           "port": 443,
           "protocol": "tcp"
@@ -346,6 +334,18 @@
           "host-ip": "::",
           "host-port": 8019,
           "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 22019,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22019,
+          "port": 22,
           "protocol": "tcp"
         }
       ]
@@ -367,7 +367,7 @@
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-346fd3b8ba60",
+        "clab-mgmt-net-bridge": "br-d6d7ab30ff44",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/Host4",
@@ -381,6 +381,18 @@
       "port-bindings": [
         {
           "host-ip": "0.0.0.0",
+          "host-port": 8020,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8020,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
           "host-port": 22020,
           "port": 22,
           "protocol": "tcp"
@@ -401,18 +413,6 @@
           "host-ip": "::",
           "host-port": 44320,
           "port": 443,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "0.0.0.0",
-          "host-port": 8020,
-          "port": 80,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "::",
-          "host-port": 8020,
-          "port": 80,
           "protocol": "tcp"
         }
       ]
@@ -432,9 +432,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:95:dc:be",
+      "mac-address": "00:1c:73:35:eb:b5",
       "labels": {
-        "clab-mgmt-net-bridge": "br-346fd3b8ba60",
+        "clab-mgmt-net-bridge": "br-d6d7ab30ff44",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/P-03",
@@ -499,9 +499,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:98:dd:ac",
+      "mac-address": "00:1c:73:30:42:2d",
       "labels": {
-        "clab-mgmt-net-bridge": "br-346fd3b8ba60",
+        "clab-mgmt-net-bridge": "br-d6d7ab30ff44",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/P-04",
@@ -515,6 +515,18 @@
       "port-bindings": [
         {
           "host-ip": "0.0.0.0",
+          "host-port": 22047,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 22047,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
           "host-port": 44304,
           "port": 443,
           "protocol": "tcp"
@@ -535,18 +547,6 @@
           "host-ip": "::",
           "host-port": 8004,
           "port": 80,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "0.0.0.0",
-          "host-port": 22047,
-          "port": 22,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "::",
-          "host-port": 22047,
-          "port": 22,
           "protocol": "tcp"
         }
       ]
@@ -566,9 +566,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:b1:43:2e",
+      "mac-address": "00:1c:73:f3:b6:48",
       "labels": {
-        "clab-mgmt-net-bridge": "br-346fd3b8ba60",
+        "clab-mgmt-net-bridge": "br-d6d7ab30ff44",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/P-05",
@@ -633,9 +633,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:47:82:b6",
+      "mac-address": "00:1c:73:8e:71:47",
       "labels": {
-        "clab-mgmt-net-bridge": "br-346fd3b8ba60",
+        "clab-mgmt-net-bridge": "br-d6d7ab30ff44",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/P-06",
@@ -700,9 +700,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:49:a5:f7",
+      "mac-address": "00:1c:73:4b:db:24",
       "labels": {
-        "clab-mgmt-net-bridge": "br-346fd3b8ba60",
+        "clab-mgmt-net-bridge": "br-d6d7ab30ff44",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/PE-01",
@@ -716,18 +716,6 @@
       "port-bindings": [
         {
           "host-ip": "0.0.0.0",
-          "host-port": 8001,
-          "port": 80,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "::",
-          "host-port": 8001,
-          "port": 80,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "0.0.0.0",
           "host-port": 22001,
           "port": 22,
           "protocol": "tcp"
@@ -748,6 +736,18 @@
           "host-ip": "::",
           "host-port": 44301,
           "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 8001,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 8001,
+          "port": 80,
           "protocol": "tcp"
         }
       ]
@@ -767,9 +767,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:0b:d2:cd",
+      "mac-address": "00:1c:73:04:15:d5",
       "labels": {
-        "clab-mgmt-net-bridge": "br-346fd3b8ba60",
+        "clab-mgmt-net-bridge": "br-d6d7ab30ff44",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/PE-02",
@@ -783,6 +783,18 @@
       "port-bindings": [
         {
           "host-ip": "0.0.0.0",
+          "host-port": 44302,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 44302,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "0.0.0.0",
           "host-port": 8002,
           "port": 80,
           "protocol": "tcp"
@@ -803,18 +815,6 @@
           "host-ip": "::",
           "host-port": 22002,
           "port": 22,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "0.0.0.0",
-          "host-port": 44302,
-          "port": 443,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "::",
-          "host-port": 44302,
-          "port": 443,
           "protocol": "tcp"
         }
       ]
@@ -834,9 +834,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:cd:d5:0a",
+      "mac-address": "00:1c:73:a8:3e:ef",
       "labels": {
-        "clab-mgmt-net-bridge": "br-346fd3b8ba60",
+        "clab-mgmt-net-bridge": "br-d6d7ab30ff44",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/PE-07",
@@ -901,9 +901,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:c0:cd:61",
+      "mac-address": "00:1c:73:69:1c:36",
       "labels": {
-        "clab-mgmt-net-bridge": "br-346fd3b8ba60",
+        "clab-mgmt-net-bridge": "br-d6d7ab30ff44",
         "clab-node-group": "",
         "clab-node-kind": "ceos",
         "clab-node-lab-dir": "/home/anichol/VPN-SRv6/clab-VPN-SRv6/PE-08",
@@ -960,13 +960,13 @@
         "a": {
           "node": "CE-1",
           "interface": "et10",
-          "mac": "aa:c1:ab:c1:e3:f9",
+          "mac": "aa:c1:ab:6e:64:12",
           "peer": "z"
         },
         "z": {
           "node": "Host1",
           "interface": "et1",
-          "mac": "aa:c1:ab:e1:b7:a9",
+          "mac": "aa:c1:ab:88:4a:6b",
           "peer": "a"
         }
       }
@@ -976,13 +976,13 @@
         "a": {
           "node": "CE-1",
           "interface": "et11",
-          "mac": "aa:c1:ab:84:f5:41",
+          "mac": "aa:c1:ab:1a:8d:31",
           "peer": "z"
         },
         "z": {
           "node": "Host2",
           "interface": "et1",
-          "mac": "aa:c1:ab:b4:77:e7",
+          "mac": "aa:c1:ab:7e:3e:b2",
           "peer": "a"
         }
       }
@@ -992,13 +992,13 @@
         "a": {
           "node": "CE-2",
           "interface": "et10",
-          "mac": "aa:c1:ab:f9:97:7f",
+          "mac": "aa:c1:ab:70:ee:79",
           "peer": "z"
         },
         "z": {
           "node": "Host3",
           "interface": "et1",
-          "mac": "aa:c1:ab:d4:9a:e8",
+          "mac": "aa:c1:ab:6b:ce:d8",
           "peer": "a"
         }
       }
@@ -1008,13 +1008,13 @@
         "a": {
           "node": "CE-2",
           "interface": "et11",
-          "mac": "aa:c1:ab:4a:73:39",
+          "mac": "aa:c1:ab:61:d3:44",
           "peer": "z"
         },
         "z": {
           "node": "Host4",
           "interface": "et1",
-          "mac": "aa:c1:ab:5d:e5:a1",
+          "mac": "aa:c1:ab:ca:e0:5d",
           "peer": "a"
         }
       }
@@ -1024,13 +1024,13 @@
         "a": {
           "node": "CE-1",
           "interface": "et1",
-          "mac": "aa:c1:ab:de:9e:7a",
+          "mac": "aa:c1:ab:f4:43:70",
           "peer": "z"
         },
         "z": {
           "node": "PE-01",
           "interface": "et10",
-          "mac": "aa:c1:ab:34:60:c8",
+          "mac": "aa:c1:ab:4d:30:57",
           "peer": "a"
         }
       }
@@ -1040,13 +1040,13 @@
         "a": {
           "node": "CE-1",
           "interface": "et2",
-          "mac": "aa:c1:ab:89:02:09",
+          "mac": "aa:c1:ab:2f:28:1f",
           "peer": "z"
         },
         "z": {
           "node": "PE-02",
           "interface": "et10",
-          "mac": "aa:c1:ab:de:a6:48",
+          "mac": "aa:c1:ab:ad:e0:4c",
           "peer": "a"
         }
       }
@@ -1056,13 +1056,13 @@
         "a": {
           "node": "CE-2",
           "interface": "et1",
-          "mac": "aa:c1:ab:19:71:d4",
+          "mac": "aa:c1:ab:b2:dc:8f",
           "peer": "z"
         },
         "z": {
           "node": "PE-07",
           "interface": "et10",
-          "mac": "aa:c1:ab:0c:af:b6",
+          "mac": "aa:c1:ab:a8:e1:01",
           "peer": "a"
         }
       }
@@ -1072,13 +1072,13 @@
         "a": {
           "node": "CE-2",
           "interface": "et2",
-          "mac": "aa:c1:ab:aa:7d:6a",
+          "mac": "aa:c1:ab:f5:88:d4",
           "peer": "z"
         },
         "z": {
           "node": "PE-08",
           "interface": "et10",
-          "mac": "aa:c1:ab:21:1d:a9",
+          "mac": "aa:c1:ab:01:7e:d2",
           "peer": "a"
         }
       }
@@ -1088,13 +1088,13 @@
         "a": {
           "node": "PE-01",
           "interface": "et4",
-          "mac": "aa:c1:ab:61:52:c3",
+          "mac": "aa:c1:ab:be:94:18",
           "peer": "z"
         },
         "z": {
           "node": "P-03",
           "interface": "et1",
-          "mac": "aa:c1:ab:a7:f6:2e",
+          "mac": "aa:c1:ab:9d:45:24",
           "peer": "a"
         }
       }
@@ -1104,13 +1104,13 @@
         "a": {
           "node": "PE-01",
           "interface": "et5",
-          "mac": "aa:c1:ab:3d:88:bd",
+          "mac": "aa:c1:ab:66:45:71",
           "peer": "z"
         },
         "z": {
           "node": "P-04",
           "interface": "et1",
-          "mac": "aa:c1:ab:94:b6:63",
+          "mac": "aa:c1:ab:e8:54:18",
           "peer": "a"
         }
       }
@@ -1120,29 +1120,13 @@
         "a": {
           "node": "PE-01",
           "interface": "et6",
-          "mac": "aa:c1:ab:2e:ba:a2",
+          "mac": "aa:c1:ab:07:51:9d",
           "peer": "z"
         },
         "z": {
           "node": "PE-02",
           "interface": "et6",
-          "mac": "aa:c1:ab:c4:17:81",
-          "peer": "a"
-        }
-      }
-    },
-    {
-      "endpoints": {
-        "a": {
-          "node": "PE-02",
-          "interface": "et4",
-          "mac": "aa:c1:ab:3b:28:b0",
-          "peer": "z"
-        },
-        "z": {
-          "node": "P-03",
-          "interface": "et2",
-          "mac": "aa:c1:ab:24:67:03",
+          "mac": "aa:c1:ab:74:aa:b1",
           "peer": "a"
         }
       }
@@ -1151,14 +1135,30 @@
       "endpoints": {
         "a": {
           "node": "PE-02",
+          "interface": "et4",
+          "mac": "aa:c1:ab:b0:53:46",
+          "peer": "z"
+        },
+        "z": {
+          "node": "P-03",
+          "interface": "et2",
+          "mac": "aa:c1:ab:77:d0:8d",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "PE-02",
           "interface": "et5",
-          "mac": "aa:c1:ab:7a:78:ac",
+          "mac": "aa:c1:ab:0f:a2:c6",
           "peer": "z"
         },
         "z": {
           "node": "P-04",
           "interface": "et2",
-          "mac": "aa:c1:ab:a7:f9:48",
+          "mac": "aa:c1:ab:f1:6a:a2",
           "peer": "a"
         }
       }
@@ -1168,13 +1168,13 @@
         "a": {
           "node": "P-03",
           "interface": "et4",
-          "mac": "aa:c1:ab:57:a7:d5",
+          "mac": "aa:c1:ab:de:4f:42",
           "peer": "z"
         },
         "z": {
           "node": "P-05",
           "interface": "et1",
-          "mac": "aa:c1:ab:52:28:f6",
+          "mac": "aa:c1:ab:1d:20:ae",
           "peer": "a"
         }
       }
@@ -1184,13 +1184,13 @@
         "a": {
           "node": "P-03",
           "interface": "et5",
-          "mac": "aa:c1:ab:ab:42:a3",
+          "mac": "aa:c1:ab:ad:76:ed",
           "peer": "z"
         },
         "z": {
           "node": "P-06",
           "interface": "et1",
-          "mac": "aa:c1:ab:bb:b1:69",
+          "mac": "aa:c1:ab:4b:8e:6c",
           "peer": "a"
         }
       }
@@ -1200,13 +1200,13 @@
         "a": {
           "node": "P-03",
           "interface": "et6",
-          "mac": "aa:c1:ab:fd:e9:a2",
+          "mac": "aa:c1:ab:7e:c2:f6",
           "peer": "z"
         },
         "z": {
           "node": "P-04",
           "interface": "et6",
-          "mac": "aa:c1:ab:42:bb:8f",
+          "mac": "aa:c1:ab:d9:24:7f",
           "peer": "a"
         }
       }
@@ -1216,13 +1216,13 @@
         "a": {
           "node": "P-04",
           "interface": "et4",
-          "mac": "aa:c1:ab:d4:27:ef",
+          "mac": "aa:c1:ab:a4:f1:8b",
           "peer": "z"
         },
         "z": {
           "node": "P-05",
           "interface": "et2",
-          "mac": "aa:c1:ab:04:f4:f2",
+          "mac": "aa:c1:ab:dd:65:94",
           "peer": "a"
         }
       }
@@ -1232,13 +1232,13 @@
         "a": {
           "node": "P-04",
           "interface": "et5",
-          "mac": "aa:c1:ab:35:c8:35",
+          "mac": "aa:c1:ab:81:f1:7c",
           "peer": "z"
         },
         "z": {
           "node": "P-06",
           "interface": "et2",
-          "mac": "aa:c1:ab:0e:63:4b",
+          "mac": "aa:c1:ab:d6:74:2e",
           "peer": "a"
         }
       }
@@ -1248,13 +1248,13 @@
         "a": {
           "node": "P-05",
           "interface": "et4",
-          "mac": "aa:c1:ab:a8:8b:cc",
+          "mac": "aa:c1:ab:5f:a2:9b",
           "peer": "z"
         },
         "z": {
           "node": "PE-07",
           "interface": "et1",
-          "mac": "aa:c1:ab:f5:6e:18",
+          "mac": "aa:c1:ab:99:14:7e",
           "peer": "a"
         }
       }
@@ -1264,13 +1264,13 @@
         "a": {
           "node": "P-05",
           "interface": "et5",
-          "mac": "aa:c1:ab:d3:ee:0c",
+          "mac": "aa:c1:ab:96:e7:55",
           "peer": "z"
         },
         "z": {
           "node": "PE-08",
           "interface": "et1",
-          "mac": "aa:c1:ab:ee:52:b4",
+          "mac": "aa:c1:ab:2d:2c:e4",
           "peer": "a"
         }
       }
@@ -1280,13 +1280,13 @@
         "a": {
           "node": "P-05",
           "interface": "et6",
-          "mac": "aa:c1:ab:c7:f8:0e",
+          "mac": "aa:c1:ab:0f:c0:f0",
           "peer": "z"
         },
         "z": {
           "node": "P-06",
           "interface": "et6",
-          "mac": "aa:c1:ab:68:3d:b6",
+          "mac": "aa:c1:ab:5d:ec:b6",
           "peer": "a"
         }
       }
@@ -1296,13 +1296,13 @@
         "a": {
           "node": "P-06",
           "interface": "et4",
-          "mac": "aa:c1:ab:7a:07:a7",
+          "mac": "aa:c1:ab:7c:1b:f9",
           "peer": "z"
         },
         "z": {
           "node": "PE-07",
           "interface": "et2",
-          "mac": "aa:c1:ab:9d:1f:bd",
+          "mac": "aa:c1:ab:39:b5:ef",
           "peer": "a"
         }
       }
@@ -1312,13 +1312,13 @@
         "a": {
           "node": "P-06",
           "interface": "et5",
-          "mac": "aa:c1:ab:93:a0:3d",
+          "mac": "aa:c1:ab:c2:ba:89",
           "peer": "z"
         },
         "z": {
           "node": "PE-08",
           "interface": "et2",
-          "mac": "aa:c1:ab:fa:5d:d1",
+          "mac": "aa:c1:ab:62:f1:79",
           "peer": "a"
         }
       }
@@ -1328,13 +1328,13 @@
         "a": {
           "node": "PE-07",
           "interface": "et6",
-          "mac": "aa:c1:ab:a9:ec:0a",
+          "mac": "aa:c1:ab:95:f2:33",
           "peer": "z"
         },
         "z": {
           "node": "PE-08",
           "interface": "et6",
-          "mac": "aa:c1:ab:da:53:ce",
+          "mac": "aa:c1:ab:6f:82:52",
           "peer": "a"
         }
       }

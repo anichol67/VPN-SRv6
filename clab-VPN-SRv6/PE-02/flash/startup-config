@@ -1,4 +1,4 @@
-! Startup-config last modified at Thu Jan  8 19:58:00 2026 by root
+! Startup-config last modified at Thu Jan 15 13:37:26 2026 by root
 ! device: PE-02 (cEOSLab, EOS-4.35.2F-45641603.seineFXanthropic1rel (engineering build))
 !
 no aaa root
@@ -114,6 +114,7 @@ interface Ethernet6
 interface Ethernet10
    no switchport
    ipv6 enable
+   channel-group 1 mode on
 !
 interface Loopback0
    ip address 1.0.1.2/32
@@ -136,6 +137,7 @@ interface Management0
    ip address 172.100.100.105/24
 !
 interface Vlan10
+   vrf tenant-a
    ip address 10.10.10.254/24
    ipv6 address virtual fd00::a:a:a:fe/120
 !
@@ -219,15 +221,6 @@ router bgp 64512
       router-id 1.0.1.2
       redistribute connected
 !
-router general
-   control-functions
-      code
-            function SET_NEXTHOP() {
-               next_hop = fc00:128:2::;
-               return true;
-            }
-      EOF
-!
 router traffic-engineering
    segment-routing
       rib system-colored-tunnel-rib
@@ -281,6 +274,5 @@ router srv6
       !
       locator Flex-128
          prefix micro-segment domain Flex-128 end usid 2
-         igp algorithm flex-algo low-latency
 !
 end

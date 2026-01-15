@@ -1,4 +1,4 @@
-! Startup-config last modified at Thu Jan  8 19:58:00 2026 by root
+! Startup-config last modified at Thu Jan 15 13:37:26 2026 by root
 ! device: PE-07 (cEOSLab, EOS-4.35.2F-45641603.seineFXanthropic1rel (engineering build))
 !
 no aaa root
@@ -118,6 +118,7 @@ interface Ethernet6
 interface Ethernet10
    no switchport
    ipv6 enable
+   channel-group 1 mode on
 !
 interface Loopback0
    ip address 1.0.1.7/32
@@ -284,6 +285,5 @@ router srv6
       !
       locator Flex-128
          prefix micro-segment domain Flex-128 end usid 7
-         igp algorithm flex-algo low-latency
 !
 end

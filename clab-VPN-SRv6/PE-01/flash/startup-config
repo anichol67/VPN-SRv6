@@ -1,4 +1,4 @@
-! Startup-config last modified at Thu Jan  8 19:58:00 2026 by root
+! Startup-config last modified at Thu Jan 15 13:37:26 2026 by root
 ! device: PE-01 (cEOSLab, EOS-4.35.2F-45641603.seineFXanthropic1rel (engineering build))
 !
 no aaa root
@@ -119,6 +119,7 @@ interface Ethernet10
    switchport mode trunk
    switchport
    ipv6 enable
+   channel-group 1 mode on
 !
 interface Loopback0
    ip address 1.0.1.1/32
@@ -182,34 +183,49 @@ route-map loopback1 permit 10
 router bgp 64512
    router-id 1.0.1.1
    maximum-paths 4
+   neighbor 1.0.1.3 remote-as 64512
+   neighbor 1.0.1.3 next-hop-self
+   neighbor 1.0.1.3 update-source Loopback0
+   neighbor 1.0.1.3 send-community extended
+   neighbor 1.0.1.3 maximum-routes 1200
+   neighbor 1.1.1.11 remote-as 65100
+   neighbor 1.1.1.11 update-source Loopback0
+   neighbor 1.1.1.11 ebgp-multihop 5
+   neighbor 1.1.1.11 send-community extended
+   neighbor 172.1.11.11 remote-as 65100
+   neighbor 172.1.11.11 next-hop-self
    neighbor fc00:0:1::3 remote-as 64512
    neighbor fc00:0:1::3 next-hop-self
    neighbor fc00:0:1::3 update-source Loopback0
    neighbor fc00:0:1::3 send-community extended
    redistribute connected
    !
+   vlan 10
+      rd 1.0.1.1:1010
+      route-target both 64512:1010
+      redistribute learned
+   !
    address-family evpn
       neighbor default encapsulation srv6 locator Flex-128
+      neighbor 1.0.1.3 activate
+      neighbor 1.0.1.3 encapsulation mpls next-hop-self source-interface Loopback0
       neighbor fc00:0:1::3 activate
       neighbor fc00:0:1::3 encapsulation mpls next-hop-self source-interface Loopback0
+   !
+   address-family ipv4
+      no neighbor 1.0.1.3 activate
+      no neighbor 1.1.1.11 activate
    !
    address-family ipv6
       neighbor fc00:0:1::3 activate
       neighbor fc00:0:1::3 rcf out SET_NEXTHOP()
    !
    vrf tenant-a
+      rd 1.0.1.1:1000
       route-target import evpn 1000:1000
       route-target export evpn 1000:1000
+      router-id 1.0.1.1
       redistribute connected
-!
-router general
-   control-functions
-      code
-            function SET_NEXTHOP() {
-               next_hop = fc00:128:1::;
-               return true;
-            }
-      EOF
 !
 router traffic-engineering
    segment-routing
@@ -264,6 +280,5 @@ router srv6
       !
       locator Flex-128
          prefix micro-segment domain Flex-128 end usid 1
-         igp algorithm flex-algo low-latency
 !
 end
