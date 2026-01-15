@@ -1,6 +1,6 @@
 # --------------------------------------------------------------
 # VPN Services with SRv6 core
-# IPv6 (default) , IP-VPN, EVPN (T-5) and FlexAlgo
+# IPv6 (default) , IP-VPN, EVPN (T-5) and FlexAlgo config
 # --------------------------------------------------------------
 
 name: VPN-SRv6
