@@ -19,7 +19,7 @@ topology:
 
   kinds:
     ceos:
-      image: ceos:4.36.2F-trunk 
+      image: arista/ceos:4.36.2F-trunk 
       env:
         CLAB_MGMT_VRF: MGMT
     linux:
