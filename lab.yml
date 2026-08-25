@@ -19,7 +19,7 @@ topology:
 
   kinds:
     ceos:
-      image: ceos:4.35.2-SRv6-EFT1 
+      image: ceos:4.36.2F-trunk 
       env:
         CLAB_MGMT_VRF: MGMT
     linux:
